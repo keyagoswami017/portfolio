@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keya Goswami | Portfolio</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#0f172a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Custom horizontal scrollbar for project scroller */
+    .no-scrollbar::-webkit-scrollbar {
+      height: 8px;
+    }
+    .no-scrollbar::-webkit-scrollbar-track {
+      background: #0f172a;
+      border-radius: 9999px;
+    }
+    .no-scrollbar::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 9999px;
+    }
+    .no-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #3b82f6;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-blue-500 selection:text-white">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-xl font-bold text-white tracking-wide hover:text-blue-400 transition">Keya Goswami</a>
+      <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+        <a href="#summary" class="hover:text-blue-400 transition">Summary</a>
+        <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+        <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+        <a href="#education" class="hover:text-blue-400 transition">Education</a>
+        <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section (About Me) -->
+  <header class="max-w-6xl mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+    <div class="flex-1 space-y-6">
+      <div class="inline-block px-3 py-1 bg-blue-950/80 border border-blue-800 text-blue-300 rounded-full text-xs font-semibold tracking-wide">
+        Software Engineer
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+        Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Keya Goswami</span>
+      </h1>
+      <p class="text-slate-400 text-lg max-w-xl leading-relaxed">
+        Building scalable automated pipelines, cloud infrastructure integrations, and resilient enterprise applications.
+      </p>
+
+      <!-- CTA & Inline Social Icons (Fixed GitHub & LinkedIn) -->
+      <div class="flex flex-wrap items-center gap-4 pt-2">
+        <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-lg shadow-lg shadow-blue-600/20 transition flex items-center gap-2">
+          Contact Me
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <!-- View Work now targets #experience -->
+        <a href="#experience" class="border border-slate-700 hover:border-slate-500 text-slate-300 font-medium px-6 py-3 rounded-lg transition">
+          View Work
+        </a>
+
+        <!-- Inline SVG Icons for immediate rendering -->
+        <div class="flex items-center gap-3 pl-2">
+          <!-- GitHub Icon -->
+          <a href="https://github.com/keyagoswami017" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-slate-300 hover:text-white transition" aria-label="GitHub Profile">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+          <!-- LinkedIn Icon -->
+          <a href="https://linkedin.com/in/keya--goswami" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-slate-300 hover:text-white transition" aria-label="LinkedIn Profile">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upload Picture Frame / Placeholder -->
+    <div class="relative group">
+      <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+      <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-slate-800 border-2 border-slate-700 flex flex-col items-center justify-center text-slate-400 overflow-hidden">
+        <img 
+      src="Photo.jpeg" 
+      alt="Keya Goswami" 
+      class="w-full h-full object-cover" 
+      id="profile-img" 
+      onload="document.getElementById('img-placeholder').classList.add('hidden')"
+      onerror="this.classList.add('hidden'); document.getElementById('img-placeholder').classList.remove('hidden')"
+      >      
+    </div>
+    </div>
+  </header>
+
+  <!-- Summary Section -->
+  <section id="summary" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800">
+    <div class="flex items-center gap-3 mb-6">
+      <div class="p-2 bg-blue-950 border border-blue-800 rounded-lg text-blue-400">
+        <i data-lucide="file-text" class="w-5 h-5"></i>
+      </div>
+      <h2 class="text-2xl font-bold text-white">Professional Summary</h2>
+    </div>
+    <div class="bg-slate-800/50 border border-slate-800 p-8 rounded-2xl backdrop-blur-sm text-slate-300 leading-relaxed text-lg">
+      Software Engineer with 8 years of experience building automated pipelines, enterprise workflows, and infrastructure integrations across Fortune 500 clients. 
+      Combines deep automation engineering expertise with hands-on cloud infrastructure experience (AWS provisioning, Terraform IaC, CI/CD pipelines, containerization, and monitoring). 
+      Skilled in scripting, system reliability, and workflow orchestration across complex enterprise environments. Completed a Master's in Software Engineering Systems at Northeastern University with hands-on cloud-native and full-stack project work.
+      Brings a practical, production-minded approach to backend development built on years of delivering reliable, high-throughput enterprise systems.
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800">
+    <div class="flex items-center gap-3 mb-10">
+      <div class="p-2 bg-blue-950 border border-blue-800 rounded-lg text-blue-400">
+        <i data-lucide="briefcase" class="w-5 h-5"></i>
+      </div>
+      <h2 class="text-2xl font-bold text-white">Work Experience</h2>
+    </div>
+
+    <div class="space-y-8">
+      <!-- Accenture -->
+      <div class="bg-slate-800/40 border border-slate-800 hover:border-slate-700 p-8 rounded-2xl transition">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+          <div>
+            <h3 class="text-xl font-bold text-white">Senior Application Development Analyst</h3>
+            <p class="text-blue-400 font-medium">Accenture • Pune, India</p>
+          </div>
+          <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-slate-400 rounded-full text-xs font-semibold w-fit">
+            Nov 2021 - Jul 2024
+          </span>
+        </div>
+        <ul class="list-disc list-inside text-slate-300 space-y-2 text-sm leading-relaxed">
+          <li>Developed end-to-end tax filing automation across 8 states, processing 10,000+ monthly filings zero-defect.</li>
+          <li>Implemented OCR pipelines using ABBYY FineReader to verify structured PDF data extraction automatically.</li>
+          <li>Built Python & Selenium scripts verifying 100+ policy cloning operations in life insurance workflows.</li>
+          <li>Designed RPA workflows to manage contract hierarchy & commissions, cutting turnaround time by 60%.</li>
+        </ul>
+      </div>
+
+      <!-- TietoEVRY -->
+      <div class="bg-slate-800/40 border border-slate-800 hover:border-slate-700 p-8 rounded-2xl transition">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+          <div>
+            <h3 class="text-xl font-bold text-white">Software Engineer</h3>
+            <p class="text-blue-400 font-medium">TietoEVRY • Pune, India</p>
+          </div>
+          <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-slate-400 rounded-full text-xs font-semibold w-fit">
+            Aug 2019 - Nov 2021
+          </span>
+        </div>
+        <ul class="list-disc list-inside text-slate-300 space-y-2 text-sm leading-relaxed">
+          <li>Automated financial report validation across ERP (SAP), POS, and web platforms, improving accuracy by 85%.</li>
+          <li>Engineered 3-stage file migration validation pipeline verifying thousands of files migrating to SharePoint.</li>
+          <li>Automated health monitoring and alerting for SharePoint and Teams environments across 10+ enterprise clients.</li>
+        </ul>
+      </div>
+
+      <!-- Atos -->
+      <div class="bg-slate-800/40 border border-slate-800 hover:border-slate-700 p-8 rounded-2xl transition">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+          <div>
+            <h3 class="text-xl font-bold text-white">Software Engineer</h3>
+            <p class="text-blue-400 font-medium">Atos • Pune, India</p>
+          </div>
+          <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-slate-400 rounded-full text-xs font-semibold w-fit">
+            May 2016 - Aug 2019
+          </span>
+        </div>
+        <ul class="list-disc list-inside text-slate-300 space-y-2 text-sm leading-relaxed">
+          <li>Applied Blue Prism SAP automation for a global consumer goods client to export and manage inbound/outbound formatted data.</li>
+          <li>Developed and validated scheduling/notification workflows across 10+ enterprise client environments.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section with Horizontal Scroller & All 6 Projects -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800">
+    <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+      <div class="flex items-center gap-3">
+        <div class="p-2 bg-blue-950 border border-blue-800 rounded-lg text-blue-400">
+          <i data-lucide="code-2" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-white">Projects</h2>
+          <p class="text-xs text-slate-400">Scroll horizontally to explore all projects</p>
+        </div>
+      </div>
+
+      <!-- Scroll Buttons -->
+      <div class="flex items-center gap-2">
+        <button onclick="scrollProjects(-1)" class="p-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-slate-300 transition" aria-label="Scroll left">
+          <i data-lucide="chevron-left" class="w-5 h-5"></i>
+        </button>
+        <button onclick="scrollProjects(1)" class="p-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-slate-300 transition" aria-label="Scroll right">
+          <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Scroller Container -->
+    <div id="project-scroller" class="flex gap-6 overflow-x-auto pb-6 no-scrollbar snap-x snap-mandatory">
+      
+      <!-- 1. VeriCode -->
+      <div class="min-w-[300px] md:min-w-[360px] max-w-[360px] snap-start bg-slate-800/40 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-slate-700 transition flex-shrink-0">
+        <div>
+          <span class="text-xs font-mono text-blue-400">Mar 2026 - Apr 2026</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-2">VeriCode - Collaborative Code Review Platform</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Full-stack collaborative platform applying 17 GoF design patterns across PR submission, automated code analysis, state machine review lifecycle, and real-time notifications.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">Java</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">Design Patterns</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">REST APIs</span>
+        </div>
+      </div>
+
+      <!-- 2. Cloud Native Infrastructure -->
+      <div class="min-w-[300px] md:min-w-[360px] max-w-[360px] snap-start bg-slate-800/40 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-slate-700 transition flex-shrink-0">
+        <div>
+          <span class="text-xs font-mono text-blue-400">Sep 2025 - Dec 2025</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-2">Cloud Native Infrastructure</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Node.js cloud app on AWS with RDS, S3, DynamoDB TTL, Lambda serverless, and SNS SendGrid integration. Automated using Terraform IaC, Packer, and GitHub Actions.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">AWS</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">Terraform</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">Node.js</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">GitHub Actions</span>
+        </div>
+      </div>
+
+      <!-- 3. Selenium Test Automation -->
+      <div class="min-w-[300px] md:min-w-[360px] max-w-[360px] snap-start bg-slate-800/40 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-slate-700 transition flex-shrink-0">
+        <div>
+          <span class="text-xs font-mono text-blue-400">Sep 2025 - Dec 2025</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-2">Selenium Test Automation</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Architected test framework with Java, TestNG, and POM architecture utilizing Excel-driven data via Apache POI. Integrated with Maven-TestNG execution pipeline.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">Selenium</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">Java</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">TestNG</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">POM</span>
+        </div>
+      </div>
+
+      <!-- 4. Secure REST API -->
+      <div class="min-w-[300px] md:min-w-[360px] max-w-[360px] snap-start bg-slate-800/40 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-slate-700 transition flex-shrink-0">
+        <div>
+          <span class="text-xs font-mono text-blue-400">Jun 2025 - Aug 2025</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-2">Secure REST API with Elasticsearch & RabbitMQ</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            REST API platform handling arbitrary JSON payloads with OAuth 2.0 (RS256), RabbitMQ messaging, Redis caching, and Elasticsearch parent-child indexing (~2K req/sec).
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">OAuth 2.0</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">RabbitMQ</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">Redis</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">Elasticsearch</span>
+        </div>
+      </div>
+
+      <!-- 5. FindMeSeat -->
+      <div class="min-w-[300px] md:min-w-[360px] max-w-[360px] snap-start bg-slate-800/40 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-slate-700 transition flex-shrink-0">
+        <div>
+          <span class="text-xs font-mono text-blue-400">Feb 2025 - Apr 2025</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-2">FindMeSeat - Library Seat Management System</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Full-stack reservation system using Spring Boot, JSP, Bootstrap, and Hibernate. Features normalized PostgreSQL schema, role-based dashboards, and time filtering.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">Spring Boot</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">PostgreSQL</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">Hibernate</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">JSP</span>
+        </div>
+      </div>
+
+      <!-- 6. Parkbnb -->
+      <div class="min-w-[300px] md:min-w-[360px] max-w-[360px] snap-start bg-slate-800/40 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-slate-700 transition flex-shrink-0">
+        <div>
+          <span class="text-xs font-mono text-blue-400">Oct 2024 - Dec 2024</span>
+          <h3 class="text-xl font-bold text-white mt-1 mb-2">Parkbnb - Parking Management System</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Full-stack React.js and Spring Boot parking booking application. Integrated Google Maps API, Geocoding API, Stripe payment gateway, and JWT authentication.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">React.js</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">Spring Boot</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">Stripe API</span>
+          <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-700">PostgreSQL</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800">
+    <div class="flex items-center gap-3 mb-10">
+      <div class="p-2 bg-blue-950 border border-blue-800 rounded-lg text-blue-400">
+        <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+      </div>
+      <h2 class="text-2xl font-bold text-white">Education</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-slate-800/40 border border-slate-800 p-8 rounded-2xl">
+        <span class="text-xs font-mono text-blue-400">May 2026</span>
+        <h3 class="text-xl font-bold text-white mt-1">Master of Science in Software Engineering</h3>
+        <p class="text-slate-300 font-medium mt-1">Northeastern University • GPA: 3.6</p>
+        <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+          <strong class="text-slate-300">Coursework:</strong> Cloud (AWS), Data Structures & Algorithms, Enterprise Software Design, Design Patterns, Object Oriented Design (Java).
+        </p>
+      </div>
+
+      <div class="bg-slate-800/40 border border-slate-800 p-8 rounded-2xl">
+        <span class="text-xs font-mono text-blue-400">May 2016</span>
+        <h3 class="text-xl font-bold text-white mt-1">Bachelor of Science in Computer Science</h3>
+        <p class="text-slate-300 font-medium mt-1">Savitribai Phule Pune University</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+  <section id="contact" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800">
+    <div class="flex items-center gap-3 mb-10">
+      <div class="p-2 bg-blue-950 border border-blue-800 rounded-lg text-blue-400">
+        <i data-lucide="mail" class="w-5 h-5"></i>
+      </div>
+      <h2 class="text-2xl font-bold text-white">Contact Me</h2>
+    </div>
+
+    <div class="bg-gradient-to-br from-slate-800/80 to-slate-900 border border-slate-800 p-8 md:p-12 rounded-3xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-6">
+        <h3 class="text-2xl font-bold text-white">Let's Connect</h3>
+        <p class="text-slate-400 leading-relaxed">
+          I am currently based in Boston, MA and open to software engineering, DevOps, and automation positions.
+        </p>
+        
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 text-slate-300">
+            <div class="p-2 bg-slate-800 rounded-lg border border-slate-700 text-blue-400">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </div>
+            <span>keyagoswami2024@gmail.com</span>
+          </div>
+          <div class="flex items-center gap-3 text-slate-300">
+            <div class="p-2 bg-slate-800 rounded-lg border border-slate-700 text-blue-400">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+            </div>
+            <span>U.S.A</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4 bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
+        <!-- Download Resume Link -->
+          <a href="https://drive.google.com/file/d/1ZrGbQtHHMXvUkMmOtGmauK-jydA3DNlT/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2">
+          Download Resume (PDF)
+        </a>
+
+        <div class="flex gap-4">
+          <!-- GitHub Link -->
+          <a href="https://github.com/keyagoswami017" target="_blank" rel="noopener noreferrer" class="flex-1 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition text-sm font-medium">
+            <svg class="w-4 h-4 fill-current text-slate-300" viewBox="0 0 24 24">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+
+          <!-- LinkedIn Link -->
+          <a href="https://linkedin.com/in/keya--goswami" target="_blank" rel="noopener noreferrer" class="flex-1 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition text-sm font-medium">
+            <svg class="w-4 h-4 fill-current text-blue-400" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="max-w-6xl mx-auto px-6 py-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+    © 2026 Keya Goswami. All rights reserved.
+  </footer>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Helper script for project scroller controls
+    function scrollProjects(direction) {
+      const container = document.getElementById('project-scroller');
+      const scrollAmount = 380;
+      container.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+</html>

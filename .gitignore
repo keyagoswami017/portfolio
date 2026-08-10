@@ -1,0 +1,12 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Editor/IDE folders
+.vscode/
+.idea/
+
+# Node / Dependencies (if you add build tools in the future)
+node_modules/
+.env
